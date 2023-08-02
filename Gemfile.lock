@@ -1,0 +1,32 @@
+PATH
+  remote: .
+  specs:
+    phlex-icons (0.1.0)
+      phlex (~> 1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    cgi (0.3.6)
+    concurrent-ruby (1.2.2)
+    erb (4.0.2)
+      cgi (>= 0.3.3)
+    minitest (5.18.1)
+    phlex (1.8.1)
+      concurrent-ruby (~> 1.2)
+      erb (>= 4)
+      zeitwerk (~> 2.6)
+    rake (10.5.0)
+    zeitwerk (2.6.9)
+
+PLATFORMS
+  arm64-darwin-22
+
+DEPENDENCIES
+  bundler (~> 2.4.17)
+  minitest (~> 5.0)
+  phlex-icons!
+  rake (~> 10.0)
+
+BUNDLED WITH
+   2.4.17
