@@ -1,8 +1,9 @@
 module Phlex
   module Icons
     class Icon < Phlex::HTML
-      def initialize(name, library:, **svg_attributes)
-        @content, @attribute_start, @svg_close = Phlex::Icons.fetch(name, library:)
+      def initialize(name, library:, variant: nil, **svg_attributes)
+        @content, @attribute_start, @svg_close =
+          Phlex::Icons.fetch(name, library: library, variant: variant)
         @svg_attributes = svg_attributes
         @title = @svg_attributes.delete(:title)
       end
