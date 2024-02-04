@@ -1,4 +1,4 @@
-require 'generators/phlex/icons/library/library_generator'
+require "generators/phlex/icons/library/library_generator"
 
 module Phlex::Icons
   class Railtie < Rails::Railtie

@@ -2,31 +2,102 @@ PATH
   remote: .
   specs:
     phlex-icons (0.1.0)
+      activesupport (~> 7)
       phlex (~> 1.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    cgi (0.3.6)
-    concurrent-ruby (1.2.2)
-    erb (4.0.2)
+    activesupport (7.1.3)
+      base64
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      mutex_m
+      tzinfo (~> 2.0)
+    ast (2.4.2)
+    base64 (0.2.0)
+    bigdecimal (3.1.6)
+    cgi (0.4.1)
+    concurrent-ruby (1.2.3)
+    connection_pool (2.4.1)
+    drb (2.2.0)
+      ruby2_keywords
+    erb (4.0.4)
       cgi (>= 0.3.3)
-    minitest (5.18.1)
-    phlex (1.8.1)
+    i18n (1.14.1)
+      concurrent-ruby (~> 1.0)
+    json (2.7.1)
+    language_server-protocol (3.17.0.3)
+    lint_roller (1.1.0)
+    minitest (5.21.2)
+    mutex_m (0.2.0)
+    parallel (1.24.0)
+    parser (3.3.0.5)
+      ast (~> 2.4.1)
+      racc
+    phlex (1.9.0)
       concurrent-ruby (~> 1.2)
       erb (>= 4)
       zeitwerk (~> 2.6)
-    rake (10.5.0)
-    zeitwerk (2.6.9)
+    racc (1.7.3)
+    rainbow (3.1.1)
+    rake (13.1.0)
+    regexp_parser (2.9.0)
+    rexml (3.2.6)
+    rubocop (1.59.0)
+      json (~> 2.3)
+      language_server-protocol (>= 3.17.0)
+      parallel (~> 1.10)
+      parser (>= 3.2.2.4)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.30.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 2.4.0, < 3.0)
+    rubocop-ast (1.30.0)
+      parser (>= 3.2.1.0)
+    rubocop-performance (1.20.2)
+      rubocop (>= 1.48.1, < 2.0)
+      rubocop-ast (>= 1.30.0, < 2.0)
+    ruby-progressbar (1.13.0)
+    ruby2_keywords (0.0.5)
+    standard (1.33.0)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.0)
+      rubocop (~> 1.59.0)
+      standard-custom (~> 1.0.0)
+      standard-performance (~> 1.3)
+    standard-custom (1.0.2)
+      lint_roller (~> 1.0)
+      rubocop (~> 1.50)
+    standard-performance (1.3.1)
+      lint_roller (~> 1.1)
+      rubocop-performance (~> 1.20.2)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    unicode-display_width (2.5.0)
+    zeitwerk (2.6.12)
 
 PLATFORMS
-  arm64-darwin-22
+  aarch64-linux
+  arm-linux
+  arm64-darwin
+  x86-linux
+  x86_64-darwin
+  x86_64-linux
 
 DEPENDENCIES
-  bundler (~> 2.4.17)
-  minitest (~> 5.0)
+  bundler (~> 2.5.5)
+  minitest (~> 5.21.2)
+  phlex (~> 1.8)
   phlex-icons!
-  rake (~> 10.0)
+  rake (~> 13.1.0)
+  standard
 
 BUNDLED WITH
-   2.4.17
+   2.5.5

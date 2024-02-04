@@ -2,12 +2,13 @@ module Phlex::Icons
   class Library
     def initialize(dir)
       @dir = dir
-      @cache = Hash.new do |cache, name|
-        cache[name] = load_icon(name)
-      end
+      @cache = {}
+      load_svgs.each { |name| @cache[name] = load_icon(name) }
     end
 
-    def [](name) = @cache[name]
+    def [](name)
+      @cache[name]
+    end
 
     def clear
       @cache.clear
@@ -21,6 +22,13 @@ module Phlex::Icons
       attribute_start = svg.index("<svg") + 4
       svg_close = svg.index(">", attribute_start) + 1
       [svg, attribute_start, svg_close]
+    end
+
+    def load_svgs
+      regex = %r{#{@dir}/(\S+).svg}
+      Dir.glob(File.join(@dir, "/**/*.svg")).map do |path|
+        path.scan(regex)
+      end.flatten
     end
   end
 end

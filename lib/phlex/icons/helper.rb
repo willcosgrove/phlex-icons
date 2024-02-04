@@ -2,8 +2,8 @@ module Phlex::Icons
   module Helper
     def self.[](default_library)
       Module.new do
-        define_method :Icon do |name, library: default_library, **options|
-          render Icon.new(name, library:, **options)
+        define_method :Icon do |name, library: default_library, variant: nil, **options|
+          render Icon.new(name, library: default_library, variant: variant, **options)
         end
         alias_method :icon, :Icon
       end.tap do |mod|

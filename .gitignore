@@ -6,3 +6,15 @@
 /pkg/
 /spec/reports/
 /tmp/
+
+*.gem
+*.key
+/log/*.log
+/node_modules
+/test/dummy/db/*.sqlite3
+/test/dummy/db/*.sqlite3-*
+/test/dummy/log/*.log
+/test/dummy/public/assets/
+/test/dummy/storage/
+/test/dummy/tmp/
+Gemfile.lock
